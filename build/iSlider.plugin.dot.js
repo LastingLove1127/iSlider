@@ -57,7 +57,8 @@
             .appendChild(dotWrap);
 
         HANDLE.on('slideChange', function () {
-            for (var i = 0; i < data.length; i++) {
+
+            for (var i = 0,len=data.length; i < len; i++) {
                 dots[i].className = 'islider-dot';
                 if (i === this.slideIndex) {
                     dots[i].className += ' active';
@@ -77,7 +78,7 @@
             });
             dots = [], evtHandle = [];
             dotWrap.innerHTML = '';
-            for (var i = 0; i < data.length; i++) {
+            for (var i = 0,len=data.length; i < len; i++) {
                 dots[i] = document.createElement('li');
                 dots[i].className = 'islider-dot';
                 dots[i].setAttribute('index', i);
